@@ -1,32 +1,37 @@
-import { useReactiveVar } from "@apollo/client";
-import { ThemeProvider } from "styled-components";
-
-import { darkModeVar, isloggedInVar } from "./apollo";
+// import { ThemeProvider } from "styled-components";
 import Home from "./Home";
-import Login from "./Login";
-import { darkTheme, GlobalStyles, lightTheme } from "./styles";
-const { Switch, BrowserRouter, Route } = require("react-router-dom");
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import Greeting from "./Greeting/Greeting";
+import Layout from "./Component/Layout/Layout"
+import Logo from "./Component/Logo"
+import styled from "styled-components";
+import { Switch, BrowserRouter, Route } from "react-router-dom";
+// const { Switch, BrowserRouter, Route } = require("react-router-dom");
 
 function App() {
-  const isLoggedIn = useReactiveVar(isloggedInVar);
-  const darkMode = useReactiveVar(darkModeVar);
-
   return (
     <div>
-      <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-        <GlobalStyles />
-        <BrowserRouter>
-          <Switch>
-            <Route path="/" exact>
-              {isLoggedIn ? <Home></Home> : <Login></Login>}
-            </Route>
-            <Route path="/profile">profile</Route>
-            <Route>404</Route>
-          </Switch>
-        </BrowserRouter>
-      </ThemeProvider>
+      <BrowserRouter>
+        <Switch>
+          <Route path="/" exact>
+            <Layout>
+              <Logo />
+              <Signup />
+            </Layout> 
+            
+            <Layout>
+              <Logo />
+              <Login />
+            </Layout> <br />
+            <Greeting />
+          </Route>
+          <Route>404</Route>
+        </Switch>
+      </BrowserRouter>
     </div>
-  );
+
+  )
 }
 
 export default App;

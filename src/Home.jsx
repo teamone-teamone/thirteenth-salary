@@ -1,11 +1,6 @@
 import React from 'react'
-import { isloggedInVar } from './apollo';
+// import HomeContainer from "../containers/Home/HomeContainer"
 
 export default function Home() {
-    return (
-        <div>
-            Home
-            <button onClick={()=>isloggedInVar(false)}>logout</button>
-        </div>
-    )
+    return 
 }

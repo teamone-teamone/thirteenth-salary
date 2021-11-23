@@ -1,17 +1,15 @@
 import styled, { css } from 'styled-components';
-
-const Image = styled.img` 
-    padding-left: 30%; //30px
-    padding-top: 30px;
-`
+import { BsQuestionCircleFill } from 'react-icons/bs';
 
 const Under = styled.div` 
     margin-top: auto;
-    background-color: #2A1D89;
+    background-color:#2A1D89;
     left: 0;
     top: 0;
     width: 100%;
-    height: 100px;
+    height: 80px;
+    position: fixed;
+    bottom:0;
 `
 
 const Contents = styled.div` 
@@ -21,7 +19,15 @@ const Contents = styled.div`
     display: flex;
     align-items: center;
     justify-content: right;
-    margin: 0 auto;
+`
+
+const Icon = styled.button` 
+  color: white;
+  justify-content: space-around;
+  border:0;
+  margin:0;
+  background-color:#2A1D89;
+  cursor: pointer;
 `
 
 const Footer = () => {
@@ -29,10 +35,12 @@ const Footer = () => {
     // 
     <Under>
       <Contents>
-        <Image src="./img/white-circle.png"></Image>
+        <Icon>
+          <BsQuestionCircleFill size="35" />
+        </Icon>
       </Contents>
-      </Under>
+    </Under>
   )
 }
 
-export default Footer
+export default Footer;

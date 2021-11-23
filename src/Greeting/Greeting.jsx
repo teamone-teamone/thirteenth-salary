@@ -1,82 +1,96 @@
 import React from 'react'
 import styled from "styled-components";
-import Button from "../Component/Button";
+import Header from "../Component/MenuLayout/Header";
+import WhiteButton from "../Component/Button/WhiteButton";
 
-const Title = styled.h1` 
-    font-style: normal;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 14px;
+const Root = styled.div` 
+    background: #2A1D89;
+    font-family: "NotoSans";
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    text-align: center;
-    padding-left: 10%;
-    padding-top: 40px;
-    float: left;
+    `
+
+const Page = styled.div`
+    background:#2A1D89;
+    width: 300px;
+    @media screen(max-width:300px) {
+        width: 100%;
+    }
 `
 
-const Image = styled.img` 
-    float: right;
-    padding-right: 35px;
-    padding-top: 40px;
-`
-
-const Header = styled.div` 
-    background-color: #2A1D89;
-    color: white;
+const Box = styled.div`
+            width: 100%;
+            display: inline-block;
+            text-align:center;
 `
 
 const Body = styled.div` 
     background-color: #2A1D89;
-    width: 100%;
+    margin:0px;
+    padding:0px;
 `
-const Container = styled.div` 
+const Middle = styled.div` 
     background-color: #2A1D89;
     color: white;
-    padding-top: 256px;
+    padding-top: 80%;
+    margin: 0;
+    padding-bottom: 110%;
 `
 const Id = styled.div` 
     font-style: normal;
     font-weight: bold;
     font-size: 30px;
     line-height: 49px;
-    display: flex;
-    align-items: center;
-    padding-left: 10%;
+    display: inline-block;
+`
+
+const Hi = styled.div` 
+    font-style: normal;
+    font-weight: 300;
+    font-size: 30px;
+    line-height: 49px;
+    display: inline-block;
 `
 
 const Description = styled.div` 
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 20px;
-    padding-top: 30px;
-    padding-left: 10%;
-    padding-right: 10%;
-    padding-bottom: 40%;
+    font-size: 13px;
+    line-height: 23px;
+    padding-top: 20px;
+    display: inline-block;
+    padding-bottom: 20%;
+
+
 `
 
 export default function Greeting() {
 
     return (
-        //전체 div
-        <Body>
-            <Header>
-                <Title>누구나 세금</Title>
-                <Image src="./img/menu.png"></Image>
-            </Header>
-            <Container>
-                <Id>
-                    멋쟁이 사자처럼님,<br /> 
-                    반갑습니다.
-                </Id>
-                <Description>
-                    복잡한 세금관리를 간편하게, <br />
-                    세금 폭탄 대신 절세 혜택을 누리는 사업, <br />
-                    지금부터 '누구나 세금'과 함께 세금 관리를 시작합니다. 
-                </Description>
-                <Button>마이페이지 둘러보기</Button> <br/>
-            </Container>
-        </Body> 
+    <Root>
+        <Page>
+            <Header />
+                    <Body>
+                        <Middle>
+                            <Id>
+                                멋쟁이 사자처럼님,
+                                <Hi>
+                                    반갑습니다.
+                                </Hi>
+                            </Id>
+                            <Description>
+                                복잡한 세금관리를 간편하게, <br />
+                                세금 폭탄 대신 절세 혜택을 누리는 사업, <br />
+                                지금부터 '누구나 세금'과 함께 세금 관리를 <br/>시작합니다. 
+                            </Description>
+                            <Box>
+                            <WhiteButton>마이페이지 둘러보기</WhiteButton> <br/>
+                            </Box>
+                        </Middle>
+                    </Body>
+        </Page>
+    </Root>
     )
 }

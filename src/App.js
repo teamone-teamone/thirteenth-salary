@@ -2,34 +2,25 @@
 import Home from "./Home";
 import Login from "./Login/Login";
 import Signup from "./Signup/Signup";
+import Signup2 from "./Signup/Signup2";
 import Greeting from "./Greeting/Greeting";
-import Layout from "./Component/Layout/Layout"
-import Logo from "./Component/Logo"
+import Greeting2 from "./Greeting2/Greeting2";
 import styled from "styled-components";
-import { Switch, BrowserRouter, Route } from "react-router-dom";
-// const { Switch, BrowserRouter, Route } = require("react-router-dom");
+import { Switch, Link, BrowserRouter, Route } from "react-router-dom";
 
 function App() {
   return (
+    <BrowserRouter>
     <div>
-      <BrowserRouter>
-        <Switch>
-          <Route path="/" exact>
-            <Layout>
-              <Logo />
-              <Signup />
-            </Layout> 
-            
-            <Layout>
-              <Logo />
-              <Login />
-            </Layout> <br />
-            <Greeting />
-          </Route>
-          <Route>404</Route>
-        </Switch>
-      </BrowserRouter>
+      <Switch>
+        <Route exact path="/login" component={Login} />
+        <Route exact path="/signup" component={Signup} />
+        <Route exact path="/signup2" component={Signup2} />
+        <Route exact path="/greeting" component={Greeting} />
+        <Route exact path="/greeting2" component={Greeting2} />
+      </Switch>
     </div>
+    </BrowserRouter>
 
   )
 }

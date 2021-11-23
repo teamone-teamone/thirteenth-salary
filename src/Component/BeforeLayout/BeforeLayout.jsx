@@ -4,13 +4,16 @@ import styled, { css } from 'styled-components';
 
 const Body = styled.div` 
     padding-top: 80px;
+    margin: 0;
+    padding: 0;
 `
 const Main = styled.div` 
     min-height: calc(100vh - 180px);
+    margin:0;
 `
 
 
-const Layout = (props: {
+const BeforeLayout = (props: {
   children: React.ReactNode
 }) => {
   return (
@@ -24,4 +27,4 @@ const Layout = (props: {
   )
 }
 
-export default Layout
+export default BeforeLayout;

@@ -9,7 +9,6 @@ import { IoMdMail } from "react-icons/io";
 import { RiKeyFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
 import { isloggedInVar, logintoken } from "../apollo";
-import { useReactiveVar } from "@apollo/client";
 import axios from "axios";
 
 const Login = memo(() => {

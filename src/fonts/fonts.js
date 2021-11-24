@@ -1,8 +1,10 @@
 import { createGlobalStyle } from 'styled-components';
-
 import NotoSansWoff from './NotoSans.woff';
 import NotoSansWoff2 from './NotoSans.woff2';
 import GongGothicBoldWoff from './GongGothicBold.woff';
+import BarlowCondensedWoff from './BarlowCondensed.woff';
+import BarlowCondensedWoff2 from './BarlowCondensed.woff2';
+
 
 
 export default createGlobalStyle`
@@ -21,9 +23,12 @@ export default createGlobalStyle`
         font-weight: normal;
         font-style: normal;
     }
-
     @font-face {
-        font-family: 'MaterialIcons';
+        font-family: 'BarlowCondensed';
+        src: local('BarlowCondensed'), local('BarlowCondensed'),
+        url(${BarlowCondensedWoff2}) format('woff2'),
+        url(${BarlowCondensedWoff}) format('woff');
+        font-weight: normal;
         font-style: normal;
-        font-weight: 400;
+    }
 `;

@@ -14,12 +14,19 @@ export default function First() {
 	return (
 		<Root>
 			<Page>
-				<Banner>
-					<Moneybag>💰</Moneybag>
-					<BannerText>지금 ‘누구나 세금’에 가입하면 한달 무료!</BannerText>
-					<BannerClose onClick={() => setClose(false)}></BannerClose>
-					{close ? <Banner></Banner> : null}
-				</Banner>
+				<BannerTop></BannerTop>
+				{close ? (
+					<Banner>
+						<Moneybag>💰</Moneybag>
+						<BannerText>지금 ‘누구나 세금’에 가입하면 한달 무료!</BannerText>
+						<BannerClose onClick={() => setClose(false)}></BannerClose>
+					</Banner>
+				) : (
+					<HeaderJoin>
+						<HeaderTitle>누구나 세금</HeaderTitle>
+						<HeaderJoinBtn>회원가입</HeaderJoinBtn>
+					</HeaderJoin>
+				)}
 				<ContainerSky>
 					<Titlebox1>
 						<h1>누구나 누워서</h1>
@@ -36,11 +43,11 @@ export default function First() {
 				</ContainerSky>
 				<ContainerWhite>
 					<Letters>
-						<Titlebox2>
+						<TitleBlue>
 							<h2>사장님은</h2>
 							<h2>사업하기도</h2>
 							<h2>바쁘니까</h2>
-						</Titlebox2>
+						</TitleBlue>
 						<Paragraph2>
 							<p>세무사 없이 혼자 끝내는 세금관리</p>
 							<p>세무사 비용을 아끼고 맞춤 절세 혜택까지!</p>
@@ -50,94 +57,100 @@ export default function First() {
 					</Letters>
 					<Phone src={phoneIcon} />
 				</ContainerWhite>
-				<HeaderJoin>
-					<Headertitle>누구나 세금</Headertitle>
-					<HeaderJoinBtn>회원가입</HeaderJoinBtn>
-				</HeaderJoin>
 				<Yellowbox1>
-					<Emojibox>
+					<EmojiBox>
 						<Frown>😫</Frown>
 						<Flyingmoney>💸</Flyingmoney>
-					</Emojibox>
-					<Titlebox2>
-						<h2>복잡한 세금에 지쳤다면,</h2>
-						<h2>
-							<Mark>누구나 세금</Mark>을 시작하세요!
-						</h2>
-					</Titlebox2>
-					<Paragraph2>
-						<p>종합소득세, 부가가치세, 원천세, 4대보험이 아직도 헷갈린다.</p>
-						<p>세금 신고 날짜를 놓쳐 세금 폭탄을 맞은 적이 있다.</p>
-						<p>세금 납부에 필요한 증빙 자료들을 어떻게 준비할지 모르겠다.</p>
-						<p>절세를 위한 비용처리 방법을 모르겠다.</p>
-					</Paragraph2>
+					</EmojiBox>
+					<LettersLeft>
+						<TitleBlue>
+							<h2>복잡한 세금에 지쳤다면,</h2>
+							<h2>
+								<Mark>누구나 세금</Mark>을 시작하세요!
+							</h2>
+						</TitleBlue>
+						<Paragraph2>
+							<p>종합소득세, 부가가치세, 원천세, 4대보험이 아직도 헷갈린다.</p>
+							<p>세금 신고 날짜를 놓쳐 세금 폭탄을 맞은 적이 있다.</p>
+							<p>세금 납부에 필요한 증빙 자료들을 어떻게 준비할지 모르겠다.</p>
+							<p>절세를 위한 비용처리 방법을 모르겠다.</p>
+						</Paragraph2>
+					</LettersLeft>
 				</Yellowbox1>
 				<ContainerColumnCenter>
-					<Titlebox2>
-						<h2>누워서 끝내는</h2>
-						<h2>복식부기장부</h2>
-					</Titlebox2>
-					<Paragraph2>
-						<p>종합소득세를 20% 절세할 수 있는 복식부기장부 작성을 시작으로</p>
-						<p>세금 납부일과 세제혜택 등을 알려드립니다.</p>
-					</Paragraph2>
-					<Bluebox>
+					<LettersLeft>
+						<TitleBlue>
+							<h2>누워서 끝내는</h2>
+							<h2>복식부기장부</h2>
+						</TitleBlue>
+						<Paragraph2>
+							<p>
+								종합소득세를 20% 절세할 수 있는 복식부기장부 작성을 시작으로
+							</p>
+							<p>세금 납부일과 세제혜택 등을 알려드립니다.</p>
+						</Paragraph2>
+					</LettersLeft>
+					<BlueBox>
 						<Titlebox3>
-							<Opaquetext>세무사에게 맡기던 복식부기장부,</Opaquetext>
-							<Opaquetext>누구나 침대에 누워 5분만에 작성하는</Opaquetext>
+							<OpaqueText>세무사에게 맡기던 복식부기장부,</OpaqueText>
+							<OpaqueText>누구나 침대에 누워 5분만에 작성하는</OpaqueText>
 							<h3>복식부기 간편 작성 서비스</h3>
 						</Titlebox3>
 						<Phonebox></Phonebox>
-					</Bluebox>
+					</BlueBox>
 					<Skybox>
 						<Titlebox4>
-							<Opaquetext>복식부기장부가 처음이시더라도</Opaquetext>
-							<Opaquetext>걱정하지 마세요</Opaquetext>
+							<OpaqueText>복식부기장부가 처음이시더라도</OpaqueText>
+							<OpaqueText>걱정하지 마세요</OpaqueText>
 							<h3>비용 처리 가능 내역 안내</h3>
 						</Titlebox4>
 					</Skybox>
 					<Skybox>
 						<Titlebox4>
-							<Opaquetext>복잡한 증빙자료 관리를</Opaquetext>
-							<Opaquetext>한번에 끝내세요</Opaquetext>
+							<OpaqueText>복잡한 증빙자료 관리를</OpaqueText>
+							<OpaqueText>한번에 끝내세요</OpaqueText>
 							<h3>엑셀 변환과 서류 저장 서비스</h3>
 						</Titlebox4>
 					</Skybox>
 				</ContainerColumnCenter>
 				<ContainerColumnCenter>
-					<Titlebox2>
-						<h2>세금 폭탄은 피하고</h2>
-						<h2>세제혜택만 챙기세요</h2>
-					</Titlebox2>
-					<Paragraph2>
-						<p>알림을 통해 가산세 폭탄을 막는 세금관리 서비스와</p>
-						<p>개인 맞춤형 세제혜택 알림</p>
-					</Paragraph2>
+					<LettersLeft>
+						<TitleBlue>
+							<h2>세금 폭탄은 피하고</h2>
+							<h2>세제혜택만 챙기세요</h2>
+						</TitleBlue>
+						<Paragraph2>
+							<p>알림을 통해 가산세 폭탄을 막는 세금관리 서비스와</p>
+							<p>개인 맞춤형 세제혜택 알림</p>
+						</Paragraph2>
+					</LettersLeft>
 					<Skybox>
 						<Titlebox4>
-							<Opaquetext>지급명세서, 원천세, 보험료 등</Opaquetext>
+							<OpaqueText>지급명세서, 원천세, 보험료 등</OpaqueText>
 							<h3>매월 세금 납부 알림</h3>
 						</Titlebox4>
 					</Skybox>
 					<Skybox>
 						<Titlebox4>
-							<Opaquetext>연간 세무일정에 맞춰 관리하도록 </Opaquetext>
+							<OpaqueText>연간 세무일정에 맞춰 관리하도록 </OpaqueText>
 							<h3>연 2회 부가세 납부 알림</h3>
 						</Titlebox4>
 					</Skybox>
 					<Skybox>
 						<Titlebox4>
-							<Opaquetext>국가에서 지원하는</Opaquetext>
-							<Opaquetext>세제혜택을 놓치지 않도록</Opaquetext>
+							<OpaqueText>국가에서 지원하는</OpaqueText>
+							<OpaqueText>세제혜택을 놓치지 않도록</OpaqueText>
 							<h3>지원사업과 국가 지원비 알림</h3>
 						</Titlebox4>
 					</Skybox>
 				</ContainerColumnCenter>
 				<Yellowbox2>
-					<Titlebox2>가격 정책</Titlebox2>
-					<Paragraph2>
-						회사 규모와 사용 목적에 맞춰 자유롭게 가격 플랜을 선택하세요.
-					</Paragraph2>
+					<LettersLeft>
+						<TitleBlue>가격 정책</TitleBlue>
+						<Paragraph2>
+							회사 규모와 사용 목적에 맞춰 자유롭게 가격 플랜을 선택하세요.
+						</Paragraph2>
+					</LettersLeft>
 					<Whitebox>
 						{check ? (
 							<BlueCheckbox onClick={() => setCheck(false)}></BlueCheckbox>
@@ -149,7 +162,7 @@ export default function First() {
 							<Titlebox5>올인원 세금관리</Titlebox5>
 							<Graytext>복식부기 간편 작성 서비스</Graytext>
 							<Pricetext1>
-								<Mark>10,000</Mark>
+								<MarkMoney>10,000</MarkMoney>
 								<Pricetext2>원</Pricetext2>
 							</Pricetext1>
 						</ContainerColumnCenter>
@@ -189,7 +202,7 @@ export default function First() {
 							<Titlebox6>유튜버 맞춤 세금관리</Titlebox6>
 							<Graytext>해외 세금 맞춤</Graytext>
 							<Pricetext1>
-								<Mark>12,000</Mark>
+								<MarkMoney>12,000</MarkMoney>
 								<Pricetext2>원</Pricetext2>
 							</Pricetext1>
 						</ContainerColumnCenter>
@@ -223,6 +236,28 @@ export default function First() {
 	);
 }
 
+const Root = styled.div`
+	background: #ffffff;
+	font-family: "NotoSans";
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	}
+`;
+
+const Page = styled.div`
+	background: #ffffff;
+	width: 600px;
+	@media screen and (max-width: 600px) {
+		width: 100%;
+	}
+`;
+
+const BannerTop = styled.header`
+	height: 24px;
+`;
+
 const Banner = styled.header`
 	background: #fffbf2;
 	height: 56px;
@@ -230,7 +265,6 @@ const Banner = styled.header`
 	font-size: 14px;
 	line-height: 20px;
 	text-align: center;
-	margin-top: 24px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -256,8 +290,11 @@ const BannerClose = styled(VscChromeClose)`
 const FooterFixed = styled.footer`
 	position: fixed;
 	top: 90vh;
-	width: 600px;
 	height: 64px;
+	width: 600px;
+	@media screen and (max-width: 600px) {
+		width: 100vw;
+	}
 	display: flex;
 	justify-content: right;
 	align-items: right;
@@ -266,9 +303,9 @@ const FooterFixed = styled.footer`
 const Question = styled.button`
 	height: 40px;
 	width: 40px;
-	margin-right: 32px;
 	border: none;
 	border-radius: 50%;
+	margin-right: 5%;
 	background: #ffffff;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25),
 		0px 8px 10px rgba(0, 0, 0, 0.25);
@@ -279,29 +316,9 @@ const Question = styled.button`
 	font-weight: bold;
 `;
 
-const Root = styled.div`
-	background: #ffffff;
-	font-family: "NotoSans";
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	}
-`;
-
-const Page = styled.div`
-	background: #ffffff;
-	flex-direction: column;
-	width: 600px;
-	@media screen(max-width: 600px) {
-		width: 100%;
-	}
-`;
-
 const ContainerSky = styled.div`
 	background: #f1f5ff;
-	height: 488px;
-	top: 136px;
+	height: 560px;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -360,11 +377,13 @@ const Login = styled.button`
 
 const ContainerWhite = styled.div`
 	background: #ffffff;
-	height: 328px;
 	display: flex;
 	flex-direction: row;
 	justify-content: center;
 	align-items: center;
+	@media screen and (max-width: 700px) {
+		flex-direction: column;
+	}
 `;
 
 const Letters = styled.div`
@@ -374,8 +393,15 @@ const Letters = styled.div`
 	flex-direction: column;
 `;
 
-const Titlebox2 = styled.div`
-	width: 351px;
+const LettersLeft = styled.div`
+	width: 309px;
+	display: flex;
+	flex-direction: column;
+	justify-content: left;
+	align-items: left;
+`;
+
+const TitleBlue = styled.div`
 	font-size: 30px;
 	margin-top: 24px;
 	margin-bottom: 12px;
@@ -385,9 +411,7 @@ const Titlebox2 = styled.div`
 `;
 
 const Paragraph2 = styled.div`
-	width: 344px;
 	font-size: 12px;
-	font-weight: bold;
 	line-height: 24px;
 	margin-bottom: 16px;
 `;
@@ -399,20 +423,25 @@ const Phone = styled.img`
 `;
 
 const HeaderJoin = styled.header`
+	position: fixed;
+	width: 600px;
+	@media screen and (max-width: 600px) {
+		width: 100vw;
+	}
 	background: #ffffff;
-	height: 80px;
+	height: 56px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 `;
 
-const Headertitle = styled.div`
+const HeaderTitle = styled.h3`
 	font-family: "GongGothicBold";
 	font-size: 14px;
 	font-weight: bold;
 	line-height: 14px;
 	color: #2a1d89;
-	margin: 40px 182px 16px 35px;
+	margin: 24px 72px 20px 0px;
 `;
 
 const HeaderJoinBtn = styled.button`
@@ -425,7 +454,7 @@ const HeaderJoinBtn = styled.button`
 	border: 3px solid #2a1d89;
 	border-radius: 10px;
 	color: #ffffff;
-	margin-top: 24px;
+	margin: 24px 0px 20px 72px;
 	text-align: center;
 `;
 
@@ -446,10 +475,10 @@ const Yellowbox1 = styled.div`
 	align-items: center;
 `;
 
-const Emojibox = styled.div`
+const EmojiBox = styled.div`
+	width: 300px;
 	height: 112px;
 	display: flex;
-	margin-right: 256px;
 `;
 
 const Frown = styled.div`
@@ -466,7 +495,7 @@ const Mark = styled.mark`
 	background: linear-gradient(to top, #f1f5ff 50%, transparent 50%);
 `;
 
-const Bluebox = styled.div`
+const BlueBox = styled.div`
 	background: #2a1d89;
 	height: 488px;
 	width: 344px;
@@ -486,7 +515,7 @@ const Titlebox3 = styled.div`
 	margin-top: 32px;
 `;
 
-const Opaquetext = styled.h3`
+const OpaqueText = styled.h3`
 	opacity: 0.7;
 `;
 
@@ -588,6 +617,12 @@ const Pricetext2 = styled.mark`
 	background: none;
 `;
 
+const MarkMoney = styled.mark`
+	font-family: "BarlowCondensed";
+	color: #091430;
+	background: linear-gradient(to top, #f1f5ff 50%, transparent 50%);
+`;
+
 const Border = styled.div`
 	border: 1px solid rgba(102, 102, 102, 0.7);
 	margin-top: 34px;
@@ -615,6 +650,9 @@ const ContainerRow = styled.div`
 
 const FooterInfo = styled.footer`
 	width: 600px;
+	@media screen and (max-width: 600px) {
+		width: 100vw;
+	}
 	height: 100px;
 	display: flex;
 	flex-direction: column;

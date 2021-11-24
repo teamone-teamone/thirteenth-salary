@@ -68,10 +68,10 @@ export default function First() {
           </EmojiBox>
           <LettersLeft>
             <TitleBlue>
-              <h2>복잡한 세금에 지쳤다면,</h2>
-              <h2>
+              <Ch2>복잡한 세금에 지쳤다면,</Ch2>
+              <Ch2>
                 <Mark>누구나 세금</Mark>을 시작하세요!
-              </h2>
+              </Ch2>
             </TitleBlue>
             <Paragraph2>
               <p>종합소득세, 부가가치세, 원천세, 4대보험이 아직도 헷갈린다.</p>
@@ -249,15 +249,16 @@ export default function First() {
     </Root>
   );
 }
-
+const Ch2 = styled.h2`
+  font-size: 25px;
+`;
 const Root = styled.div`
-	background: #ffffff;
-	font-family: "NotoSans";
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	}
+  background: #ffffff;
+  font-family: "NotoSans";
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Customimg = styled.img`

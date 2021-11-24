@@ -5,7 +5,7 @@ import { AiFillPlusSquare, AiOutlinePlus } from "react-icons/ai";
 import styled, { createGlobalStyle } from "styled-components";
 import { isloggedInVar } from "./apollo";
 import GlobalFonts from "./fonts/fonts";
-import phoneIcon from "./images/phone.png";
+import { Link } from "react-router-dom";
 
 export default function First() {
   const [check, setCheck] = useState(true);
@@ -24,7 +24,9 @@ export default function First() {
         ) : (
           <HeaderJoin>
             <HeaderTitle>누구나 세금</HeaderTitle>
-            <HeaderJoinBtn>회원가입</HeaderJoinBtn>
+            <Link to="/signup">
+              <HeaderJoinBtn>회원가입</HeaderJoinBtn>
+            </Link>
           </HeaderJoin>
         )}
         <ContainerSky>
@@ -38,8 +40,12 @@ export default function First() {
             <p>세무 증빙자료의 간편화와 절세의 경험.</p>
             <p>사장님이 사업에 집중할 수 있도록 누구나 세금이 함께합니다.</p>
           </Paragraph1>
-          <Join>회원가입</Join>
-          <Login>로그인</Login>
+          <Link to="/signup">
+            <Join>회원가입</Join>
+          </Link>
+          <Link to="/login">
+            <Login>로그인</Login>
+          </Link>
         </ContainerSky>
         <ContainerWhite>
           <Letters>
@@ -55,7 +61,7 @@ export default function First() {
               <p>최적화된 세금관리 서비스를 만나보세요</p>
             </Paragraph2>
           </Letters>
-          <Phone src={phoneIcon} />
+          <Phone src="img/phone.png" />
         </ContainerWhite>
         <Yellowbox1>
           <EmojiBox>
@@ -96,7 +102,9 @@ export default function First() {
               <OpaqueText>누구나 침대에 누워 5분만에 작성하는</OpaqueText>
               <h3>복식부기 간편 작성 서비스</h3>
             </Titlebox3>
-            <Phonebox></Phonebox>
+            <Phonebox>
+              <Customimg src="img/1.png"></Customimg>
+            </Phonebox>
           </BlueBox>
           <Skybox>
             <Titlebox4>
@@ -104,6 +112,7 @@ export default function First() {
               <OpaqueText>걱정하지 마세요</OpaqueText>
               <h3>비용 처리 가능 내역 안내</h3>
             </Titlebox4>
+            <Rightimg src="img/2.png"></Rightimg>
           </Skybox>
           <Skybox>
             <Titlebox4>
@@ -111,6 +120,7 @@ export default function First() {
               <OpaqueText>한번에 끝내세요</OpaqueText>
               <h3>엑셀 변환과 서류 저장 서비스</h3>
             </Titlebox4>
+            <Rightimg src="img/3.png"></Rightimg>
           </Skybox>
         </ContainerColumnCenter>
         <ContainerColumnCenter>
@@ -129,12 +139,16 @@ export default function First() {
               <OpaqueText>지급명세서, 원천세, 보험료 등</OpaqueText>
               <h3>매월 세금 납부 알림</h3>
             </Titlebox4>
+
+            <Rightimg src="img/4.png"></Rightimg>
           </Skybox>
           <Skybox>
             <Titlebox4>
               <OpaqueText>연간 세무일정에 맞춰 관리하도록 </OpaqueText>
               <h3>연 2회 부가세 납부 알림</h3>
             </Titlebox4>
+
+            <Rightimg src="img/5.png"></Rightimg>
           </Skybox>
           <Skybox>
             <Titlebox4>
@@ -142,6 +156,8 @@ export default function First() {
               <OpaqueText>세제혜택을 놓치지 않도록</OpaqueText>
               <h3>지원사업과 국가 지원비 알림</h3>
             </Titlebox4>
+
+            <Rightimg src="img/6.png"></Rightimg>
           </Skybox>
         </ContainerColumnCenter>
         <Yellowbox2>
@@ -246,6 +262,14 @@ const Root = styled.div`
 	}
 `;
 
+const Customimg = styled.img`
+  width: 100%;
+`;
+
+const Rightimg = styled.img`
+  width: 90%;
+  transform: translate(20%, 9px);
+`;
 const Page = styled.div`
   background: #ffffff;
   width: 600px;
@@ -281,6 +305,7 @@ const BannerText = styled.h1`
 `;
 
 const BannerClose = styled(VscChromeClose)`
+  cursor: pointer;
   font-size: 24px;
   color: #666666;
   background: none;
@@ -353,6 +378,7 @@ const Paragraph1 = styled.div`
 `;
 
 const Join = styled.button`
+  cursor: pointer;
   height: 48px;
   width: 200px;
   border: 3px solid #2a1d89;
@@ -364,6 +390,7 @@ const Join = styled.button`
   color: #ffffff;
 `;
 const Login = styled.button`
+  cursor: pointer;
   height: 48px;
   width: 200px;
   border-radius: 10px;
@@ -446,6 +473,7 @@ const HeaderTitle = styled.h3`
 `;
 
 const HeaderJoinBtn = styled.button`
+  cursor: pointer;
   height: 32px;
   width: 91px;
   font-size: 12px;
@@ -532,11 +560,12 @@ const Phonebox = styled.div`
 const Skybox = styled.div`
   padding: 0px 20px;
   background: #f1f5ff;
-  height: 344px;
+  padding-bottom: 30px;
   width: 85%;
   border-radius: 10px;
   font-size: 20px;
   margin-bottom: 24px;
+  overflow: hidden;
 `;
 
 const Titlebox4 = styled.div`

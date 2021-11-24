@@ -1,30 +1,25 @@
-import Footer from "./Footer"
-import Header from "./Header"
-import styled, { css } from 'styled-components';
+import Footer from "./Footer";
+import Header from "./Header";
+import styled from "styled-components";
 
-const Body = styled.div` 
-    padding-top: 80px;
-    margin: 0;
-    padding: 0;
-`
-const Main = styled.div` 
-    min-height: calc(100vh - 180px);
-    margin:0;
-`
+const Body = styled.div`
+  padding-top: 80px;
+  margin: 0;
+  padding: 0;
+`;
+const Main = styled.div`
+  min-height: calc(100vh - 180px);
+  margin: 0;
+`;
 
-
-const HomeLayout = (props: {
-  children: React.ReactNode
-}) => {
+const HomeLayout = (props: { children: React.ReactNode }) => {
   return (
     <Body>
       <Header />
-      <Main>
-        {props.children}
-      </Main>
+      <Main>{props.children}</Main>
       <Footer />
-      </Body>
-  )
-}
+    </Body>
+  );
+};
 
 export default HomeLayout;

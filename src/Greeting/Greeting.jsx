@@ -1,11 +1,9 @@
-import React, { useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import Header from "../Component/MenuLayout/Header";
 import WhiteButton from "../Component/Button/WhiteButton";
 import { Link } from "react-router-dom";
-import { logintoken } from "../apollo";
-import { useReactiveVar } from "@apollo/client";
-import axios from "axios";
+
 const Root = styled.div`
   background: #2a1d89;
   font-family: "NotoSans";
@@ -68,8 +66,6 @@ const Description = styled.div`
 `;
 
 export default function Greeting() {
-  const token = useReactiveVar(logintoken);
-
   return (
     <Root>
       <Page>

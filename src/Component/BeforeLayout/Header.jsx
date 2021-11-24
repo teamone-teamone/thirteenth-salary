@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { MdArrowBackIos } from "react-icons/md";
 import { Link } from "react-router-dom";
 

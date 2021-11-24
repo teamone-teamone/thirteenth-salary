@@ -3,7 +3,7 @@ import BlueButton from "../Component/Button/BlueButton";
 import WhiteButton from "../Component/Button/WhiteButton";
 import HomeLayout from "../Component/HomeLayout/HomeLayout";
 import Logo from "../Component/Logo";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 // import CheckBox from '../Component/Checkbox';
 import { IoMdMail } from "react-icons/io";
 import { RiKeyFill } from "react-icons/ri";

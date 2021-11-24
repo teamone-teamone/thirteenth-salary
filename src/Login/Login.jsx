@@ -1,10 +1,10 @@
-import React, { memo, useState, useEffect } from "react";
+import React, { memo, useState } from "react";
 import { useHistory } from "react-router";
 import BlueButton from "../Component/Button/BlueButton";
 import WhiteButton from "../Component/Button/WhiteButton";
 import Logo from "../Component/Logo";
 import HomeLayout from "../Component/HomeLayout/HomeLayout";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 import { IoMdMail } from "react-icons/io";
 import { RiKeyFill } from "react-icons/ri";
 import { Link } from "react-router-dom";
@@ -14,7 +14,6 @@ import axios from "axios";
 
 const Login = memo(() => {
   const history = useHistory();
-  const token = useReactiveVar(logintoken);
   const [inputId, setInputId] = useState("");
   const [inputPw, setInputPw] = useState("");
 

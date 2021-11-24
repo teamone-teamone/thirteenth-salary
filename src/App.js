@@ -8,7 +8,7 @@ import Signup from "./Signup/Signup";
 import Signup2 from "./Signup/Signup2";
 import Greeting from "./Greeting/Greeting";
 import Greeting2 from "./Greeting2/Greeting2";
-import { Switch, Link, BrowserRouter, Route } from "react-router-dom";
+import { Switch, BrowserRouter, Route } from "react-router-dom";
 import GlobalFonts from "./fonts/fonts";
 
 function App() {

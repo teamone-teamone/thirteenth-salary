@@ -2,9 +2,7 @@ import React, { useState } from "react";
 import { VscChromeClose } from "react-icons/vsc";
 import { MdCheckBox, MdCheck } from "react-icons/md";
 import { AiFillPlusSquare, AiOutlinePlus } from "react-icons/ai";
-import styled, { createGlobalStyle } from "styled-components";
-import { isloggedInVar } from "./apollo";
-import GlobalFonts from "./fonts/fonts";
+import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export default function First() {
